@@ -90,7 +90,7 @@ async def send_for_index(bot, message):
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
         return await message.reply(
-            f'<b>❓Index This Channel Files❓</b>\n\n🔖<b>Chat ID/ Username ›</b> <code>{chat_id}</code>',
+            f'<b>❓Index This Channel Files❓</b>\n\n🗳 <b>Chat ID/ Username ›</b> <code>{chat_id}</code>',
             reply_markup=reply_markup)
 
     if type(chat_id) is int:
@@ -110,7 +110,7 @@ async def send_for_index(bot, message):
     ]
     reply_markup = InlineKeyboardMarkup(buttons)
     await bot.send_message(LOG_CHANNEL,
-                           f'<b>#IndexRequest</b>\n\n👤User {message.from_user.mention} [<code>{message.from_user.id}</code>]\n📮 Channel - {link}',
+                           f'<b>#IndexRequest</b>\n\n<b>👤 User |</b> {message.from_user.mention} [<code>{message.from_user.id}</code>]\n<b>🧩 Channel |</b> {link}',
                            reply_markup=reply_markup)
     await message.reply('ThankYou For the Contribution, Wait For My Boss to verify the files.')
 
