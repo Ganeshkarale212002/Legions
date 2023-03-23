@@ -62,7 +62,7 @@ async def leave_a_chat(bot, message):
         chat = chat
     try:
         buttons = [[
-            InlineKeyboardButton('🎗️Support🎗️', url=f'https://telegram.me/FHDmovies24x7Official')
+            InlineKeyboardButton('🎗️Support🎗️', url=f'https://telegram.me/FHDmovies24x7')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
@@ -101,7 +101,7 @@ async def disable_chat(bot, message):
     await message.reply('Chat Successfully Disabled')
     try:
         buttons = [[
-            InlineKeyboardButton('🎗️Support🎗️', url=f'https://telegram.me/FHDmovies24x7Official')
+            InlineKeyboardButton('🎗️Support🎗️', url=f'https://telegram.me/FHDmovies24x7')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
