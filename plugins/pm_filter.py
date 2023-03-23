@@ -34,7 +34,7 @@ async def give_filter(client, message):
 async def next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
     if int(req) not in [query.from_user.id, 0]:
-        return await query.answer("🔆 Honey, It's Not For You❗\n🔆 हनी, ये तुम्हारे लिए नहीं है❗", show_alert=True)
+        return await query.answer("🔆 It's Not For You❗\n🔆 ये तुम्हारे लिए नहीं है❗", show_alert=True)
     try:
         offset = int(offset)
     except:
@@ -80,7 +80,7 @@ async def next_page(bot, query):
 
     btn.insert(0,
         [
-            InlineKeyboardButton(text="❓⟨ How To Download ⟩❓", url='https://t.me/HeroFlix/1541')
+            InlineKeyboardButton(text="❓⟨ How To Download ⟩❓", url='https://t.me/FHDmovies24x7Official/3536')
         ]
     )
 
@@ -120,7 +120,7 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("🔆 Honey, It's Not For You❗\n🔆 हनी, ये तुम्हारे लिए नहीं है❗", show_alert=True)
+        return await query.answer("🔆 It's Not For You❗\n🔆 ये तुम्हारे लिए नहीं है❗", show_alert=True)
     if movie_ == "close_spellcheck":
         return await query.message.delete(1)
     movies = SPELL_CHECK.get(query.message.reply_to_message.id)
@@ -135,7 +135,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('<b><i>⚠ 404 Error, No Results❗</i></b> \n\n<b><i>🚫 The Reason❓ [</i></b><a href="https://telegram.me/HeroFlix/1371"><b><i>Click Here</i></b></a><b><i>]</i></b> \n<i><b>📮 Please Follow Request Tips </i></b> \n<b><i>🔆 Request Tips › [</i></b><a href="https://t.me/HEROFLiX/894"><b><i>Click Here</i></b></a><b><i>]</i></b>')
+            k = await query.message.edit('<b><i>⚠ 404 Error, No Results❗</i></b> \n\n<b><i>🚫 The Reason❓ [</i></b><a href="https://telegram.me/FHDmovies24x7Official/3540"><b><i>Click Here</i></b></a><b><i>]</i></b> \n<i><b>📮 Please Follow Request Tips </i></b> \n<b><i>🔆 Request Tips › [</i></b><a href="https://t.me/FHDmovies24x7Official/3360"><b><i>Click Here</i></b></a><b><i>]</i></b>')
             await asyncio.sleep(20)
             await k.delete()
 
@@ -156,20 +156,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     title = chat.title
                 except:
                     await query.message.edit_text("Make sure I'm present in your group!!", quote=True)
-                    return await query.answer('🔆 @HeroFlix 🔆')
+                    return await query.answer('🔆 @FHDmovies24x7 🔆')
             else:
                 await query.message.edit_text(
                     "I'm not connected to any groups!\nCheck /connections or connect to any groups",
                     quote=True
                 )
-                return await query.answer('🔆 @HeroFlix 🔆')
+                return await query.answer('🔆 @FHDmovies24x7 🔆')
 
         elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
             grp_id = query.message.chat.id
             title = query.message.chat.title
 
         else:
-            return await query.answer('🔆 @HeroFlix 🔆')
+            return await query.answer('🔆 @FHDmovies24x7 🔆')
 
         st = await client.get_chat_member(grp_id, userid)
         if (st.status == enums.ChatMemberStatus.OWNER) or (str(userid) in ADMINS):
@@ -194,7 +194,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 except:
                     pass
             else:
-                await query.answer("🔆 Honey, It's Not For You❗\n🔆 हनी, ये तुम्हारे लिए नहीं है❗", show_alert=True)
+                await query.answer("🔆 It's Not For You❗\n🔆 ये तुम्हारे लिए नहीं है❗", show_alert=True)
     elif "groupcb" in query.data:
         await query.answer()
 
@@ -223,7 +223,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=keyboard,
             parse_mode=enums.ParseMode.MARKDOWN
         )
-        return await query.answer('🔆 @HeroFlix 🔆')
+        return await query.answer('🔆 @FHDmovies24x7 🔆')
     elif "connectcb" in query.data:
         await query.answer()
 
@@ -244,7 +244,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
         else:
             await query.message.edit_text('Some error occurred!!', parse_mode=enums.ParseMode.MARKDOWN)
-        return await query.answer('🔆 @HeroFlix 🔆')
+        return await query.answer('🔆 @FHDmovies24x7 🔆')
     elif "disconnect" in query.data:
         await query.answer()
 
@@ -267,7 +267,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer('🔆 @HeroFlix 🔆')
+        return await query.answer('🔆 @FHDmovies24x7 🔆')
     elif "deletecb" in query.data:
         await query.answer()
 
@@ -285,7 +285,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer('🔆 @HeroFlix 🔆')
+        return await query.answer('🔆 @FHDmovies24x7 🔆')
     elif query.data == "backcb":
         await query.answer()
 
@@ -296,7 +296,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_text(
                 "There are no active connections!! Connect to some groups first.",
             )
-            return await query.answer('🔆 @HeroFlix 🔆')
+            return await query.answer('🔆 @FHDmovies24x7 🔆')
         buttons = []
         for groupid in groupids:
             try:
@@ -407,8 +407,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ], [
             InlineKeyboardButton('❓How To Use Me❓', callback_data='help'),
         ], [            
-            InlineKeyboardButton('🔅 Group', url='https://telegram.me/+EdJU1Hqk1N80ZWQ1'),
-            InlineKeyboardButton('🤖 Updates', url='https://telegram.me/HeroFlix')
+            InlineKeyboardButton('🔅 Group', url='https://telegram.me/FHDmovies24x7'),
+            InlineKeyboardButton('🤖 Updates', url='https://telegram.me/FHDmovies24x7Official')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -416,14 +416,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-        await query.answer('🔆 @HeroFlix 🔆')
+        await query.answer('🔆 @FHDmovies24x7 🔆')
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('🎗️Group [01]', url='https://t.me/+WzsvFY3qXa9kZGVl'),
-            InlineKeyboardButton('🎗️Group [02]', url='https://t.me/+EdJU1Hqk1N80ZWQ1')
+            InlineKeyboardButton('🎗️Group', url='https://telegram.me/FHDmovies24x7'),
+            InlineKeyboardButton('🚩Channel', url='https://telegram.me/FHDmovies24x7Official')
         ], [
-            InlineKeyboardButton('🔅 Marvel', url='https://t.me/MarvelRiders'),
-            InlineKeyboardButton('🔅 DC', url='https://t.me/DCknights')
+            InlineKeyboardButton('🔅 Contact', url='https://t.me/Butcher_V1_bot'),
+            InlineKeyboardButton('💎 Donate', url='https://t.me/Butcher_V1_bot')
         ], [
             InlineKeyboardButton('🔙 BACK', callback_data='start'),
         ]]
@@ -462,7 +462,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if str(grp_id) != str(grpid):
             await query.message.edit("Your Active Connection Has Been Changed. Go To /settings.")
-            return await query.answer('🔆 @HeroFlix 🔆')
+            return await query.answer('🔆 @FHDmovies24x7 🔆')
 
         if status == "True":
             await save_group_settings(grpid, set_type, False)
@@ -481,7 +481,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
-    await query.answer('🔆 @HeroFlix 🔆')
+    await query.answer('🔆 @FHDmovies24x7 🔆')
 
 
 async def auto_filter(client, msg, spoll=False):
@@ -533,7 +533,7 @@ async def auto_filter(client, msg, spoll=False):
 
     btn.insert(0,
         [
-            InlineKeyboardButton(text="❓⟨ How To Download ⟩❓", url='https://t.me/HeroFlix/1541')
+            InlineKeyboardButton(text="❓⟨ How To Download ⟩❓", url='https://t.me/FHDmovies24x7Official/3536')
         ]
     )
 
@@ -621,7 +621,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply('<b><i>⚠ 404 Error, No Results❗</i></b> \n\n<b><i>🚫 The Reason❓ [</i></b><a href="https://telegram.me/HeroFlix/1371"><b><i>Click Here</i></b></a><b><i>]</i></b> \n<b><i>📮 Please Follow Request Tips !!</i></b> \n<b><i>🔆 Request Tips › [</i></b><a href="https://telegram.me/HEROFLiX/894"><b><i>Click Here</i></b></a><b><i>]</i></b>')
+        k = await msg.reply('<b><i>⚠ 404 Error, No Results❗</i></b> \n\n<b><i>🚫 The Reason❓ [</i></b><a href="https://telegram.me/FHDmovies24x7Official/3540"><b><i>Click Here</i></b></a><b><i>]</i></b> \n<b><i>📮 Please Follow Request Tips !!</i></b> \n<b><i>🔆 Request Tips › [</i></b><a href="https://telegram.me/FHDmovies24x7Official/3360"><b><i>Click Here</i></b></a><b><i>]</i></b>')
         await asyncio.sleep(20)
         await k.delete()
         return
@@ -650,7 +650,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply('<b><i>⚠ 404 Error, No Results❗</i></b> \n\n<b><i>🚫 The Reason❓ [</i></b><a href="https://telegram.me/HeroFlix/1371"><b><i>Click Here</i></b></a><b><i>]</i></b> \n<b><i>📮 Please Follow Request Tips !!</i></b> \n<b><i>🔆 Request Tips › [</i></b><a href="https://telegram.me/HEROFLiX/894"><b><i>Click Here</i></b></a><b><i>]</i></b>')
+        k = await msg.reply('<b><i>⚠ 404 Error, No Results❗</i></b> \n\n<b><i>🚫 The Reason❓ [</i></b><a href="https://telegram.me/FHDmovies24x7Official/3540"><b><i>Click Here</i></b></a><b><i>]</i></b> \n<b><i>📮 Please Follow Request Tips !!</i></b> \n<b><i>🔆 Request Tips › [</i></b><a href="https://telegram.me/FHDmovies24x7Official/3360"><b><i>Click Here</i></b></a><b><i>]</i></b>')
         await asyncio.sleep(20)
         await k.delete()
         return
