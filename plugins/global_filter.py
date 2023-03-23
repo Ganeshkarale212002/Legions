@@ -77,7 +77,7 @@ async def addgfilter(client, message):
     await add_gfilter('gfilters', text, reply_text, btn, fileid, alert)
 
     await message.reply_text(
-        f"GFilter for  `{text}`  added",
+        f"<b>🆕 Filter</b> `{text}` <b>Added ✔</b>",
         quote=True,
         parse_mode=enums.ParseMode.MARKDOWN
     )
@@ -88,7 +88,7 @@ async def get_all_gfilters(client, message):
     texts = await get_gfilters('gfilters')
     count = await count_gfilters('gfilters')
     if count:
-        gfilterlist = f"Total number of gfilters : {count}\n\n"
+        gfilterlist = f"<b>🗃 Total Filters || {count}\n\n</b>"
 
         for text in texts:
             keywords = " ×  `{}`\n".format(text)
@@ -104,7 +104,7 @@ async def get_all_gfilters(client, message):
                 )
             return
     else:
-        gfilterlist = f"There are no active gfilters."
+        gfilterlist = f"<b>📂 There Are No Filters</b>"
 
     await message.reply_text(
         text=gfilterlist,
@@ -118,9 +118,8 @@ async def deletegfilter(client, message):
         cmd, text = message.text.split(" ", 1)
     except:
         await message.reply_text(
-            "<i>Mention the gfiltername which you wanna delete!</i>\n\n"
-            "<code>/delg gfiltername</code>\n\n"
-            "Use /viewgfilters to view all available gfilters",
+            "<b><i>❓How To Delete A Filter❓</i></b>\n\n"
+            "<b><i>🔆Send /delg Filter Name</i></b>",
             quote=True
         )
         return
@@ -133,10 +132,10 @@ async def deletegfilter(client, message):
 @Client.on_message(filters.command('delallg') & filters.user(ADMINS))
 async def delallgfill(client, message):
     await message.reply_text(
-            f"Do you want to continue??",
+            f"<b>❓Delete All Filters❓</b>",
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton(text="YES",callback_data="gconforme")],
-                [InlineKeyboardButton(text="CANCEL",callback_data="close_data")]
+                [InlineKeyboardButton(text="Accept ✅",callback_data="gconforme")],
+                [InlineKeyboardButton(text="Reject ❌",callback_data="close_data")]
             ]),
             quote=True
         )
