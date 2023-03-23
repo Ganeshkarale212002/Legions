@@ -77,7 +77,7 @@ async def addgfilter(client, message):
     await add_gfilter('gfilters', text, reply_text, btn, fileid, alert)
 
     await message.reply_text(
-        f"<b>🆕 Filter</b> `{text}` <b>Added ✔</b>",
+        f"**🆕 Filter** `{text}` **Added ✔**",
         quote=True,
         parse_mode=enums.ParseMode.MARKDOWN
     )
@@ -88,7 +88,7 @@ async def get_all_gfilters(client, message):
     texts = await get_gfilters('gfilters')
     count = await count_gfilters('gfilters')
     if count:
-        gfilterlist = f"<b>🗃 Total Filters || {count}\n\n</b>"
+        gfilterlist = f"**🗃 Total Filters** [ {count} ]\n\n"
 
         for text in texts:
             keywords = " ×  `{}`\n".format(text)
