@@ -11,37 +11,39 @@ def is_enabled(value, default):
         return default
 
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
-BOT_TOKEN = environ.get('BOT_TOKEN', ')
+API_ID = int(environ.get('API_ID', '5997447'))
+API_HASH = environ.get('API_HASH', '04fbdff99ed5edff6dfdcc4ef710d04e')
+BOT_TOKEN = environ.get('BOT_TOKEN', '5799862522:AAHu4UdnpgiWZcBF0E6t-xKvxN3jV1OWToE')
 
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 
-PICS = (environ.get('PICS', ' ')).split()
+PICS = (environ.get('PICS', 'https://graph.org/file/8efd0afb0d2be91a7b9e8.jpg ')).split()
 
 
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1089524901').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001623403850').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '1089524901').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL', '')
+auth_channel = environ.get('AUTH_CHANNEL', '-1001362105778')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
-DATABASE_URI = environ.get('DATABASE_URI', ")
-DATABASE_NAME = environ.get('DATABASE_NAME', "")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', '')
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Dynasty:212002@dynasty.m47qtum.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Dynasty")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Dynasty')
 
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001912298297'))
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '5310501360')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", '')
+
+
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "")
-IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "")
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "🎗 <i><b>{title} ({year}) {kind} </b> \n━━━━━━━━━━━━━━━━\n🎭 </i><i><b>Genre › {genres}\n⭐ Rating › {rating} / 10 </b>\n📚 </i><i><b>Story</b> › {plot} </i>")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
