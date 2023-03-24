@@ -47,7 +47,7 @@ async def save_group(bot, message):
         for u in message.new_chat_members:
             await message.reply_photo(
             photo="https://graph.org/file/8efd0afb0d2be91a7b9e8.jpg",                                               
-                                                 caption=f'<b><i>🔆 "FHDmovies24x7 • GROUP" 亗 🔆\n•───────────────────• \n⚜Hey {u.mention}, Welcome To FHDmovies24x7 • Group. You Can Request Any Movies, Web-Series, Anime, K-Dramas, Animation, etc., here....</i></b>',
+                                                 caption=f'<b><i>🔆 "FHDmovies24x7"亗 🔆\n•───────────────────• \n⚜Hey {u.mention}, Welcome To FHDmovies24x7 • Group. You Can Request Any Movies, Web-Series, Anime, K-Dramas, Animation, etc., here....</i></b>',
                                                  reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('❗How To Request & Download❗', url='https://t.me/FHDmovies24x7Official/3536') ] ] )
                 )
 
