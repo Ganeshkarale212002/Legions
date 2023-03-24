@@ -39,7 +39,7 @@ SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '5310501360')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", '<a href="https://telegram.me/FHDmovies24x7"><b><i>{file_name}</i></b></a>\n━━━━━━━━━━━━━━━━━━━━\n<b><i>🔆 彡 [ @FHDmovies24X7 ] 彡 🔆</b></i>')
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", '<b><i>{file_name}</i></b></a>\n━━━━━━━━━━━━━━━━━━━━\n<b><i>🔆 彡 [ @FHDmovies24X7 ] 彡 🔆</b></i>')
 
 
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "")
