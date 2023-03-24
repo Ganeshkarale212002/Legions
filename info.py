@@ -13,7 +13,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '5997447'))
 API_HASH = environ.get('API_HASH', '04fbdff99ed5edff6dfdcc4ef710d04e')
-BOT_TOKEN = environ.get('BOT_TOKEN', '5720019292:AAFyXrykBEk68gJ4_yeZOlZGqHBfbqCPFuE')
+BOT_TOKEN = environ.get('BOT_TOKEN', '5635181453:AAGZBId5dj2FBLwrqcrogAPeus749_p6DNo')
 
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
@@ -34,7 +34,7 @@ DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Dynasty:212002@dynasty
 DATABASE_NAME = environ.get('DATABASE_NAME', "Dynasty")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Dynasty')
 
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001912298297'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001683103329'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '5310501360')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), False)
