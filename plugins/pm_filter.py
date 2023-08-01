@@ -422,8 +422,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🎗️Group', url='https://telegram.me/FHDmovies24x7'),
             InlineKeyboardButton('🚩Channel', url='https://telegram.me/FHDmovies24x7Official')
         ], [
-            InlineKeyboardButton('🔅 Contact', url='https://t.me/Butcher_V1_bot'),
-            InlineKeyboardButton('💎 Donate', url='https://t.me/Butcher_V1_bot')
+            InlineKeyboardButton('🔅 Contact', url='https://t.me/FHD24x7FeedBot'),
+            InlineKeyboardButton('💎 Donate', url='https://t.me/FHD24x7FeedBot')
         ], [
             InlineKeyboardButton('🔙 BACK', callback_data='start'),
         ]]
