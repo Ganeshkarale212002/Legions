@@ -381,8 +381,8 @@ async def get_shortlink(link):
     if "http" == https:
         https = "https"
         link = link.replace("http", https)
-    url = f'https://easysky.in/api'
-    params = {'api': '56cb94ebee3c5ee7d1c84808168f60acdfc50657',
+    url = f'https://shortxlinks.com/api'
+    params = {'api': '4557745caf1bcb04a85db2a9adae756045b83c15',
               'url': link,
               }
 
